@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Server Support</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #2b5876, #4e4376);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?galaxy,space');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+            animation: slideInLeft 1.5s ease-out;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+            animation: slideInRight 1.5s ease-out;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .feature-item {
+            background: rgba(0, 0, 0, 0.7);
+            margin: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1 1 30%;
+            min-width: 280px;
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.1);
+        }
+
+        .feature-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .cta {
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta a:hover {
+            background: #e67e22;
+            transform: scale(1.2);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#join">Join Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to Our Discord Server</h1>
+        <p>Your hub for collaboration, learning, and fun!</p>
+    </div>
+
+    <section id="about" class="section">
+        <h2>About Our Server</h2>
+        <p>
+            Our Discord server is a community for like-minded individuals to connect, collaborate, and learn together.
+            Whether you're into coding, gaming, or just looking to make new friends, there's something for everyone.
+            Join us and be part of a growing community!
+        </p>
+    </section>
+
+    <section id="features" class="section">
+        <h2>Server Features</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Community Events</h3>
+                <p>
+                    Participate in regular events, competitions, and challenges designed to keep you engaged and
+                    entertained.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3>Expert Support</h3>
+                <p>
+                    Get help from experienced members on a variety of topics, including coding, gaming strategies, and
+                    more.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3>Resource Sharing</h3>
+                <p>
+                    Access a wealth of resources shared by the community, including tutorials, guides, and tools to help
+                    you improve.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="cta">
+        <h2>Ready to Join?</h2>
+        <a href="https://discord.com/invite/your-invite-code" target="_blank">Join Our Discord Server</a>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to our support team.</p>
+        <p>Email: <a href="mailto:support@discordserver.com">support@discordserver.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Discord Server | All rights reserved.</p>
+        <p>Follow us on
+            <a href="https://twitter.com/discordserver" target="_blank">Twitter</a>,
+            <a href="https://facebook.com/discordserver" target="_blank">Facebook</a>, and
+            <a href="https://instagram.com/discordserver" target="_blank">Instagram</a>.
+        </p>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Example JavaScript to handle dynamic content (like user stats)
+        const stats = {
+            members: 523,
+            online: 127,
+            events: 34
+        };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const statsDiv = document.createElement('div');
+    statsDiv.style.textAlign = 'center';
+    statsDiv.style.padding = '20px';
+    statsDiv.style.background = '#34495e';
+    statsDiv.style.marginTop = '20px';
+    statsDiv.style.borderRadius = '10px';
+
+    statsDiv.innerHTML = `
+    <h2>Server Stats</h2>
+    <p><strong>Members:</strong> ${stats.members}</p>
+    <p><strong>Online Now:</strong> ${stats.online}</p>
+    <p><strong>Events Held:</strong> ${stats.events}</p>
+    `;
+
+    document.querySelector('.section#about').appendChild(statsDiv);
+});
+
+// JavaScript for handling feature item hover effects
+document.querySelectorAll('.feature-item').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = '#2ecc71';
+        item.querySelector('h3').style.color = '#fff';
+    });
+
+    item.addEventListener('mouseout', () => {
+        item.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+        item.querySelector('h3').style.color = '#fff';
+    });
+});
+
+// Dynamic time greeting in the hero section
+const greeting = document.createElement('p');
+const now = new Date();
+const hours = now.getHours();
+let greetingText = '';
+
+if (hours < 12) {
+    greetingText = 'Good Morning!';
+} else if (hours < 18) {
+    greetingText = 'Good Afternoon!';
+} else {
+    greetingText = 'Good Evening!';
+}
+
+greeting.textContent = greetingText;
+greeting.style.fontSize = '1.5rem';
+greeting.style.marginTop = '10px';
+document.querySelector('.hero').appendChild(greeting);
+
+// Scroll to top button
+const scrollToTopBtn = document.createElement('button');
+scrollToTopBtn.textContent = '↑';
+scrollToTopBtn.style.position = 'fixed';
+scrollToTopBtn.style.bottom = '20px';
+scrollToTopBtn.style.right = '20px';
+scrollToTopBtn.style.backgroundColor = '#e67e22';
+scrollToTopBtn.style.color = '#fff';
+scrollToTopBtn.style.border = 'none';
+scrollToTopBtn.style.borderRadius = '50%';
+scrollToTopBtn.style.padding = '15px';
+scrollToTopBtn.style.cursor = 'pointer';
+scrollToTopBtn.style.display = 'none';
+scrollToTopBtn.style.fontSize = '1.5rem';
+document.body.appendChild(scrollToTopBtn);
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+</script>
+</body>
+
+</html>
